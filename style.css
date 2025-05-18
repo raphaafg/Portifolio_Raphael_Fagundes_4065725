@@ -1,0 +1,111 @@
+/* Estilo geral base da página*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0f2c; /* cor de fundo = azul bem escuro */
+  color: white; /* cor do texto = branco para contraste */
+}
+
+/* Sidebar = menu lateral a ser usado para navegação */
+.sidebar {
+  background-color: #1c2c5b; /* cor de fundo = azul mais claro */
+  width: 180px; 
+  height: 100vh; 
+  position: fixed; /* fixa a sidebar na tela para que sempre esteja aparente */
+  top: 0;
+  left: 0;
+  transition: width 0.3s; /* efeito de transição suave */
+  
+}
+
+.sidebar:hover {
+  width: 280px; /* aumenta a largura da sidebar ao passar o mouse */
+}
+
+.menu-label { /* edição do título do MENU */
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px; 
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer; /* mouse vira a mão para indicar que é clicável */
+}
+
+.menu-links {  
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: none; /* esconde os links */
+}
+
+.sidebar:hover .menu-links { 
+  display: block; /* mostra os links ao passar o mouse, fica dinâmico */
+}
+
+.menu-links li { 
+  margin: 10px 0;
+}
+
+.menu-links a { /* edição dos links no MENU */
+  display: block;
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #1c2c5b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.menu-links a:hover { 
+  background-color: #0a0f2c;
+  color: #a8c6ff; /* cor mais clara no hover */
+}
+
+/* Conteúdo principal a ser visualizado */
+.conteudo {
+  margin-left: 300px; /* espaço respeitando a sidebar */
+  padding: 40px;
+}
+
+h1 { 
+  color: #a8c6ff;
+}
+
+.card { /* Cartão destacando as informações no site */
+  position: relative;
+  background-color: #1c2c5b;
+  border: 1px solid #3b4d87;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover { /* efeito de destaque ao passar o mouse */
+  transform: scale(1.02);
+}
+
+.card a { /* link do cartão */
+  color: #a8c6ff;
+  text-decoration: none;
+  
+}
+
+.card a:hover { 
+  text-decoration: underline;
+}
+
+.card a:active { 
+  color: #6e64f7;
+}
+
+.img-ref { /* imagem de referência do assunto nos cartões */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+  height: auto;
+}
+
